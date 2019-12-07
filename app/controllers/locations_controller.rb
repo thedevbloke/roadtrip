@@ -17,7 +17,7 @@ class LocationsController < ApplicationController
   def create
     @location = @trip.locations.new(location_params)
     if @location.save
-      redirect_to [@trip, @location]
+      redirect_to [@trip]
     else
       render :new
     end

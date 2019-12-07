@@ -1,7 +1,7 @@
 <h1><%= @trip.name %></h1>
 <hr />
 <% @trip.locations.each do |location| %>
-  <p><%= location.name %></p>
+<p><%= link_to location.name, [@trip, location] %> | </p>
 <%end%>
 <%= link_to 'Add Location', new_trip_location_path(@trip) %>
 <br />
