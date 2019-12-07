@@ -1,0 +1,13 @@
+<h1><%= @location.id ? 'Edit Locations' : 'Create Location'%></h1>
+<hr />
+<%= form_for [@trip, @location] do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name, required: true, autofocus: true %>
+  <%= f.label :days %>
+  <%= f.number_field :days, required: true %>
+
+  <%= f.submit %>
+<%end%>
+
+<%= link_to 'Back', trip_path(@trip) %>
+
